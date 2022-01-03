@@ -1,4 +1,7 @@
-import ReactDOM from "react-dom";
-import { App } from "./App";
+import ReactDOM from 'react-dom'
+import App from './app'
+import { i18n } from './config'
 
-ReactDOM.render(<App />, document.getElementById("root"));
+i18n.init()
+
+ReactDOM.render(<App />, document.getElementById('root'))
