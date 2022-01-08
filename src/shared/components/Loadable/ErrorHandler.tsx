@@ -12,11 +12,11 @@ const ErrorHandler = ({ error, reset }: ErrorHandlerProps) => {
         severity="error"
         action={
           <Button color="inherit" size="small" onClick={reset}>
-            xd
+            Error
           </Button>
         }
       >
-        <AlertTitle>xd</AlertTitle>
+        <AlertTitle>Error</AlertTitle>
         {error.message}
       </Alert>
     </Box>

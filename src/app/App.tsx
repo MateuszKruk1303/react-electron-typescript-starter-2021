@@ -8,9 +8,10 @@ import { SnackbarProvider } from 'notistack'
 import { theme } from 'config'
 import { PageLoader, Layout } from 'shared/components'
 import { routes, store } from './App.setup'
+import { useTrasnlationConfig } from 'shared/hooks'
 
 const App = () => {
-  console.log(process.env.REACT_APP_API_URL)
+  const { handleSetLanguage, isInitialized } = useTrasnlationConfig()
 
   return (
     <SnackbarProvider>
@@ -20,7 +21,12 @@ const App = () => {
             <CssBaseline />
             <Suspense fallback={<PageLoader />}>
               <HashRouter>
-                <Layout routes={routes} />
+                {isInitialized && (
+                  <Layout
+                    routes={routes}
+                    handleSetLanguage={handleSetLanguage}
+                  />
+                )}
               </HashRouter>
             </Suspense>
           </LocalizationProvider>

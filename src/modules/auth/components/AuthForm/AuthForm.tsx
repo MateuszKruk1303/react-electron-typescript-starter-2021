@@ -1,10 +1,11 @@
 import { Grid } from '@mui/material'
 import { LoadingButton } from '@mui/lab'
-import { useTranslation } from 'react-i18next'
 import { paths } from 'config'
 import { Form, PasswordField, TextField, ErrorAlert } from 'shared/components'
 import { AuthFormFields, useFormProps } from './AuthForm.utils'
 import { MODULE_NAME } from 'modules/auth/strings'
+import { useTranslation } from 'shared/hooks'
+import { isString } from 'shared/utils'
 
 interface LoginFormProps {
   path: string
@@ -20,7 +21,7 @@ const LoginForm = ({ path, submitText, ...props }: LoginFormProps) => {
     <Form {...formProps} {...props}>
       <Grid container spacing={3}>
         <Grid container justifyContent="center">
-          {error && <ErrorAlert>{error}</ErrorAlert>}
+          {error && isString(error) && <ErrorAlert>{error}</ErrorAlert>}
         </Grid>
         <Grid item xs={12}>
           <Grid container spacing={3}>

@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Dashboard"
+  },
+  "error": {
+    "reset": "Reload",
+    "somethingWentWrong": "Oops! Something went wrong."
+  },
+  "days_one": "{{count}} day",
+  "days_other": "{{count}} days",
+  "languages": {
+    "pl": "Polish",
+    "en": "English"
+  },
+  "logout": "Logout"
+}

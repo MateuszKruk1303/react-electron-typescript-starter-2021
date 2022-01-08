@@ -14,11 +14,11 @@ module.exports = [
     },
   },
   {
-    test: /\.(js|ts|tsx)$/,
+    test: /\.(js|ts|tsx|cjs)$/,
     exclude: /node_modules/,
     use: {
-      loader: 'babel-loader'
-    }
+      loader: 'babel-loader',
+    },
   },
   {
     test: /\.(png|jpe?g|gif)$/i,
@@ -26,5 +26,9 @@ module.exports = [
     options: {
       name: '[path][name].[ext]',
     },
-  }
+  },
+  {
+    test: /\.svg$/,
+    use: ['@svgr/webpack'],
+  },
 ]

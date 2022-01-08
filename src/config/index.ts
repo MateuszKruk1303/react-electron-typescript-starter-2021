@@ -1,5 +1,4 @@
 export { default as env } from './env'
-export { default as i18n } from './i18n'
 export { default as theme } from './theme'
 export { default as paths } from './paths'
 
@@ -8,9 +7,12 @@ const throwError = (message: string) => {
 }
 
 const config = {
-  accessTokenKey: 'leafeeAccessToken',
-  refreshTokenKey: 'leafeeRefreshToken',
+  accessTokenKey: 'accessToken',
   errorNamespace: 'errors',
+  defaultLanguage: 'en',
+  languageNamespaces: ['auth', 'common', 'home'],
+  languages: ['en', 'pl'],
+  defaultNamespace: 'common',
   apiUrl:
     process.env.REACT_APP_API_URL ||
     throwError('Missing API_URL env variable.'),

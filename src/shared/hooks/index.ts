@@ -1,3 +1,5 @@
 export { useDialog } from './use-dialog'
 export { useErrorSnackbar } from './use-error-snackbar'
 export { useAuth } from './use-auth'
+export { useTranslation } from './use-translation'
+export { useTrasnlationConfig } from './use-translation-config'

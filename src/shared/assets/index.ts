@@ -1,1 +1,3 @@
-export { ReactComponent as Logo } from './logo.svg'
+import Earth from './earth.svg'
+
+export { Earth }

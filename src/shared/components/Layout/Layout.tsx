@@ -7,12 +7,13 @@ import TopBar from './TopBar'
 
 export interface LayoutProps {
   routes: ModuleRoute[]
+  handleSetLanguage: (lng: string) => void
 }
 
-const Layout = ({ routes }: LayoutProps) => {
+const Layout = ({ routes, handleSetLanguage }: LayoutProps) => {
   return (
     <Container>
-      <TopBar />
+      <TopBar setLanguage={handleSetLanguage} />
       <Switch>
         {routes.map((route, i) => (
           <PrivateRoute key={`route-${i}`} {...route} />

@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Strona główna"
+  },
+  "error": {
+    "reset": "Przeładuj",
+    "somethingWentWrong": "Ups! Coś poszło nie tak."
+  },
+  "days_one": "{{count}} dzień",
+  "days_other": "{{count}} dni",
+  "languages": {
+    "pl": "Polski",
+    "en": "Angielski"
+  },
+  "logout": "Wyloguj się"
+}
